@@ -1,0 +1,20 @@
+@mixin template {
+  margin: 5px 0;
+  border-radius: 3px;
+  color: $color-white;
+  font: 14px/32px sans-serif;
+  text-align: center;
+  min-height: 32px;
+}
+.cell {
+  @include template();
+  background: green;
+}
+.level-2 {
+  @include template();
+  background: darkcyan;
+}
+.level-3 {
+  @include template();
+  background: indigo;
+}
