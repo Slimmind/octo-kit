@@ -151,6 +151,16 @@ gulp.task('js-dev', ['jscs', 'lint'], function () {
     .pipe(gulp.dest('dist/js'));
 });
 
+// BROWSER-SYNC
+
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
+
 // WATCH
 
 gulp.task('watch', function () {
