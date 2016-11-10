@@ -1,3 +1,6 @@
+$width: 100;
+$gutter: 10;
+$columns: 12;
 .wrapper {
   width: 100%;
   max-width: 960px;
@@ -36,47 +39,32 @@
   float: initial !important;
 }
 
-$width: 100;
-$gutter: 10;
-$columns: 12;
+$resolutions: 320px, 375px, 414px, 768px, 1024px, 1280px, 1440px, 1600px, 2560px;
 
-//$mob: 1px;
-//$xmob: 375px; //iPhone 6
-//$xxmob: 414px; //iPhone 6+
-//$tab: 768px;
-//$lap: 1024px;
-//$desk: 1280px; // MacBook 13'
-//$xdesk: 1440px; // MacBook 15'
-//$xxdesk: 1600px;
-//$xxxdesk: 2560px; //iMac '27
-
-$resolutions: 1px, 375px, 414px, 768px, 1024px, 1280px, 1440px, 1600px, 2560px;
-
-$sizeList: mob xmob xxmob tab lap desk xdesk xxdesk xxxdesk;
+$sizeList: mob xmob xxmob tab xtab lap xlap desk xdesk;
 @each $size in $sizeList {
-  @each $resolution in $resolutions {
-    @media all and (min-width: $resolution) {
-      @for $i from 1 through $columns {
-        $column-width: (($width / $columns) * $i) * 1%;
-        .#{$size}-#{$i} {
-          width: $column-width;
-        }
-        .#{$size}-offset-#{$i} {
-          margin-left: $column-width;
-        }
-        .#{$size}-push-#{$i} {
-          left: $column-width;
-        }
-        .#{$size}-pull-#{$i} {
-          right: $column-width;
-        }
-        .#{$size}-centered {
-          @include centered;
-        }
-        .#{$size}-uncentered {
-          @include uncentered;
-        }
+  $sizeItem: index($sizeList, $size );
+  @media all and (min-width: nth($resolutions, $sizeItem)) {
+    @for $i from 1 through $columns {
+      $column-width: (($width / $columns) * $i) * 1%;
+      .#{$size}-#{$i} {
+        width: $column-width;
       }
+      .#{$size}-offset-#{$i} {
+        margin-left: $column-width;
+      }
+      .#{$size}-push-#{$i} {
+        left: $column-width;
+      }
+      .#{$size}-pull-#{$i} {
+        right: $column-width;
+      }
+    }
+    .#{$size}-centered {
+      @include centered;
+    }
+    .#{$size}-uncentered {
+      @include uncentered;
     }
   }
 }
