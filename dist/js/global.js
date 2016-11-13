@@ -1,3 +1,5 @@
+/* //= includes/plugin_name.js */
+
 (function ($, window, document) {
   'use strict';
   var page = {
@@ -27,6 +29,7 @@
     'resize': page.resize,
     'scroll': page.scroll
   });
+  
   window.isDevice = page.isDev;
 
 })(jQuery, window, document);
