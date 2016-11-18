@@ -63,6 +63,34 @@
     width: $width;
   }
 }
+@mixin inlineWhiteSpace($font-size, $line-height) {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -5px;
+  > * {
+    display: inline-block;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: normal;
+  }
+}
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &:-moz-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
+// -- MEDIA QUERIES
+
 @mixin mob-landscape {
   @media screen and(min-width: 480px) and (orientation: landscape) {
     @content;
