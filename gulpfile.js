@@ -9,17 +9,11 @@
 
  3. Check the version node.js ( 0.10.25) and npm ( 2.3.0)
 
- node -v  //v0.12.7
- npm -v  //2.11.3
-
- If the version does not match, update
-
- sudo npm cache clean -f
- sudo npm install -g n
- sudo n stable
+ node -v  //v6.9.1
+ npm -v  //v3.10.8
 
  4. install modules
- sudo npm install
+ sudo yarn install
 
  5. Run gulp
  gulp
@@ -96,7 +90,7 @@ gulp.task('fonts', function () {
 
 gulp.task('scss', function () {
 	var processors = [
-    autoprefixer({browsers: ['last 1 version']})
+    autoprefixer({browsers: ['last 2 versions']})
   ];
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
     .pipe(sass())
@@ -111,7 +105,7 @@ gulp.task('scss', function () {
 
 gulp.task('scss-dev', function () {
 		var processors = [
-      autoprefixer({browsers: ['last 1 version']})
+      autoprefixer({browsers: ['last 2 versions']})
     ];
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
     .pipe(sass())
