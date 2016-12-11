@@ -382,8 +382,7 @@ html [type='button'],
     padding-right: 10px;
     padding-left: 10px;
 
-    -webkit-transition: all .7s ease;
-            transition: all .7s ease;
+    transition: all .7s ease;
 }
 
 *
@@ -478,10 +477,8 @@ table
     width: 18px;
     height: 18px;
 
-    -webkit-transition: fill .5s ease;
-            transition: fill .5s ease;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-            transform: translateY(-50%) translateX(-50%);
+    transition: fill .5s ease;
+    transform: translateY(-50%) translateX(-50%);
 }
 
 ::-webkit-inner-spin-button
@@ -540,8 +537,7 @@ textarea
 
 ::-webkit-input-placeholder
 {
-    -webkit-transition: opacity .3s ease;
-            transition: opacity .3s ease;
+    transition: opacity .3s ease;
 
     opacity: 1;
 }
@@ -634,8 +630,7 @@ label
     padding-right: 10px;
     padding-left: 10px;
 
-    -webkit-transition: all .7s ease;
-            transition: all .7s ease;
+    transition: all .7s ease;
 }
 
 .header_
@@ -664,8 +659,7 @@ label
 
 .content p a
 {
-    -webkit-transition: color .3s ease;
-            transition: color .3s ease;
+    transition: color .3s ease;
 
     color: #666;
 }
@@ -38216,17 +38210,6 @@ label
 
         margin-right: initial !important;
         margin-left: initial !important;
-    }
-}
-
-@-webkit-keyframes some-animation
-{
-    0%
-    {
-    }
-
-    100%
-    {
     }
 }
 
