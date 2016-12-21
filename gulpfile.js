@@ -1,24 +1,3 @@
-/*
- 1. Install gulp globally:
-
- sudo npm install --global gulp
-
- 2. Install gulp in your project devDependencies:
-
- sudo npm install --save-dev gulp
-
- 3. Check the version node.js ( 0.10.25) and npm ( 2.3.0)
-
- node -v  //v6.9.1
- npm -v  //v3.10.8
-
- 4. install modules
- sudo yarn install
-
- 5. Run gulp
- gulp
- */
-
 var args = process.argv.slice(2);
 var fs = require('fs');
 var path = require('path');

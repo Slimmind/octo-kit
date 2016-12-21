@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "main": "index.js",
   "repository": "git@github.com:Slimmind/octo-kit.git",
-  "author": "slimmind <slimmind@gmail.com>",
+  "author": "BigDropInc",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.17.5",
