@@ -2,9 +2,12 @@
 @import "../libs/variables";
 @import "../libs/mixins";
 //sections
-@import "../sections/grid-example";
+//@import "../sections/grid-example";
 body {
-  //background-color: green;
+  background-color: green;
+}
+h1 {
+  color: red;
 }
 
 

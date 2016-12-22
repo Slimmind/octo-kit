@@ -16,7 +16,14 @@ var cmq = require('gulp-combine-mq');
 var cssMin = require('gulp-cssmin');
 var csscomb = require('gulp-csscomb');
 var rigger = require('gulp-rigger');
+
+var browserSync = require('browser-sync').create();
+var changed = require('gulp-changed');
+
 var pages = '_*.html';
+var syncPages = '*.html';
+var startPage = 'testGULP.lo/menu.html';
+
 //gulp -p _home.html
 var _p = args.indexOf('-p');
 if (_p !== -1) {
@@ -72,6 +79,7 @@ gulp.task('scss', function () {
     autoprefixer({browsers: ['last 2 versions']})
   ];
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
+    //.pipe(changed('dist/css'))
     .pipe(sass())
     .pipe(postcss(processors))
     .pipe(cmq({
@@ -84,7 +92,7 @@ gulp.task('scss', function () {
 
 gulp.task('scss-dev', function () {
 		var processors = [
-      autoprefixer({browsers: ['last 2 versions']})
+      autoprefixer({browsers: ['last 2 versions', '> 1%', 'ie 10']})
     ];
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
     .pipe(sass())
@@ -122,6 +130,7 @@ gulp.task('js', ['jscs', 'lint'], function () {
 
 gulp.task('js-dev', ['jscs', 'lint'], function () {
   gulp.src(['assets/js/*.js'])
+    //.pipe(changed('dist/js'))
     .pipe(rigger())
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
@@ -129,6 +138,16 @@ gulp.task('js-dev', ['jscs', 'lint'], function () {
       suffix: '.min'
     }))
     .pipe(gulp.dest('dist/js'));
+});
+
+// BROWSERSYNC
+gulp.task('serve', function () {
+  browserSync.init({
+    proxy: startPage
+  });
+
+  browserSync.watch(['dist/**/*.*', syncPages]).on('change', browserSync.reload)
+
 });
 
 // WATCH
@@ -141,5 +160,5 @@ gulp.task('watch', function () {
 
 // DEFAULT
 
-gulp.task('default', ['html', 'images', 'fonts', 'scss', 'js', 'watch']);
+gulp.task('default', ['html', 'images', 'fonts', 'scss', 'js', 'serve', 'watch']);
 gulp.task('dev', ['html', 'images-dev', 'fonts', 'scss-dev', 'js-dev', 'watch']);

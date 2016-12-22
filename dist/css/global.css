@@ -637,7 +637,7 @@ label
 {
     height: 100px;
 
-    background-color: blue;
+    background-color: #ff7;
 }
 
 .content
@@ -797,6 +797,11 @@ label
     overflow: hidden;
 
     height: 100vh;
+}
+
+body
+{
+    background-color: yellow;
 }
 
 @font-face
