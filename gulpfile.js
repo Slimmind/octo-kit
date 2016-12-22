@@ -38,7 +38,7 @@ var pagesWatch = [pages, 'templates/*.html'];
 
 gulp.task('html', function () {
   gulp.src(pages)
-    //.pipe(changed(syncPages))
+    .pipe(changed(syncPages))
     .pipe(rigger())
     .pipe(rename(function (path) {
       var newName = path.basename;
