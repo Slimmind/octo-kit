@@ -38,6 +38,7 @@ var pagesWatch = [pages, 'templates/*.html'];
 
 gulp.task('html', function () {
   gulp.src(pages)
+    //.pipe(changed(syncPages))
     .pipe(rigger())
     .pipe(rename(function (path) {
       var newName = path.basename;
@@ -79,7 +80,7 @@ gulp.task('scss', function () {
     autoprefixer({browsers: ['last 2 versions']})
   ];
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
-    //.pipe(changed('dist/css'))
+    .pipe(changed('dist/css'))
     .pipe(sass())
     .pipe(postcss(processors))
     .pipe(cmq({
@@ -130,7 +131,7 @@ gulp.task('js', ['jscs', 'lint'], function () {
 
 gulp.task('js-dev', ['jscs', 'lint'], function () {
   gulp.src(['assets/js/*.js'])
-    //.pipe(changed('dist/js'))
+    .pipe(changed('dist/js'))
     .pipe(rigger())
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())

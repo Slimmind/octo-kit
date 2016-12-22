@@ -637,7 +637,7 @@ label
 {
     height: 100px;
 
-    background-color: #ff7;
+    background-color: green;
 }
 
 .content
@@ -806,12 +806,12 @@ body
 
 body
 {
-    background-color: green;
+    background-color: blue;
 }
 
 h1
 {
-    color: red;
+    color: blue;
 }
 
 @font-face
