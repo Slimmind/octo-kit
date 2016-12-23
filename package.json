@@ -1,6 +1,6 @@
 {
   "name": "kit",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "index.js",
   "repository": "git@github.com:Slimmind/octo-kit.git",
   "author": "BigDropInc",
@@ -23,10 +23,5 @@
     "gulp-uglify": "^1.1.0",
     "imagemin-pngcrush": "^4.0.0",
     "jshint-stylish": "^1.0.0"
-  },
-  "dependencies": {
-    "postcss-flexboxfixer": "^0.0.5",
-    "postcss-scss": "^0.4.0",
-    "precss": "^1.4.0"
   }
 }
