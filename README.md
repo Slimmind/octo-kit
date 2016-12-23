@@ -1,49 +1,70 @@
-# octoKIT
-
-frontend dev kit
+###octoKIT
+***
 
 1. go to your dev-path:
 
-    <code>cd /var/www</code>
+    ```
+    cd /var/www
+    ```
   
 2. create project-path by newsite.sh:
 
-    <code>sh newsite.sh yourProjectName</code>
+    ```
+    sh newsite.sh yourProjectName
+    ```
 
 3. go to your project-path:
 
-    <code>cd yourProjectName</code>
+    ```
+    cd yourProjectName
+    ```
 
 4. initialize git in your project-path:
 
-    <code>git init</code>
+    ```
+    git init
+    ```
 
 5. include remote repository with octoKIT to your project:
 
-    <code>git remote add origin git@github.com:Slimmind/octoKIT.git</code>
+    ```
+    git remote add origin git@github.com:Slimmind/octoKIT.git
+    ```
 
 6. switch to needed git branch:
 
-    <code>git checkout -b slice</code>
+    ```
+    git checkout -b slice
+    ```
 
 7. choose needed node version by NVM-tool:
 
-    <code>nvm use [node-version-number]</code>
+    ```
+    nvm use [node-version-number]
+    ```
 
 8. if you use legacy node version (0.12), run node-modules installation by command:
 
-    <code>sudo npm install</code>
+    ```
+    sudo npm install
+    ```
   
 9. if you use nodeversion >=4 and you have YARN, run node-modules installation by command:
 
-    <code>yarn install</code>
+    ```
+    yarn install
+    ```
 
 10. find startPage variable in your gulpfile.js and replace it equal ot yourProjectName:
 
-    <code>var startPage = 'yourProjectName.lo/menu.html';</code>
+    ```javascript
+    var startPage = 'yourProjectName.lo/menu.html';
+    ```
 
 11. run gulp by command:
 
-    <code>gulp</code>
+    ```
+    gulp
+    ```
   
 12. ...and have a fun!
