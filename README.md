@@ -28,7 +28,7 @@ frontend dev kit
 9. if you use nodeversion >=4 and you have YARN, run node-modules installation by command:
     yarn install
 
-10 find startPage variable in your gulpfile.js and replace it equal ot yourProjectName:
+10. find startPage variable in your gulpfile.js and replace it equal ot yourProjectName:
     var startPage = 'yourProjectName.lo/menu.html';
 
 11. run gulp by command:
