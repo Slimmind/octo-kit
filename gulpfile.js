@@ -10,8 +10,7 @@ var jshint = require('gulp-jshint');
 var imageMin = require('gulp-imagemin');
 var pngCrush = require('imagemin-pngcrush');
 var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
+var prefix = require('gulp-autoprefixer');
 var cmq = require('gulp-combine-mq');
 var cssMin = require('gulp-cssmin');
 var csscomb = require('gulp-csscomb');
@@ -76,13 +75,10 @@ gulp.task('fonts', function () {
 // CSS
 
 gulp.task('scss', function () {
-	var processors = [
-    autoprefixer({browsers: ['last 2 versions']})
-  ];
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
     .pipe(changed('dist/css'))
     .pipe(sass())
-    .pipe(postcss(processors))
+    .pipe(prefix('last 2 versions', '> 1%', 'ie 10'))
     .pipe(cmq({
     	beautify: true
     }))
@@ -92,16 +88,13 @@ gulp.task('scss', function () {
 });
 
 gulp.task('scss-dev', function () {
-		var processors = [
-      autoprefixer({browsers: ['last 2 versions', '> 1%', 'ie 10']})
-    ];
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
     .pipe(sass())
-    .pipe(postcss(processors))
+    .pipe(prefix('last 2 versions', '> 1%', 'ie 10'))
     .pipe(cmq({
     	beautify: true
     }))
-    .pipe(postcss(processors)).pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(csscomb())
     .pipe(cssMin())
     .pipe(rename({

@@ -804,14 +804,46 @@ body
     background-color: yellow;
 }
 
-body
+.cell
 {
-    background-color: blue;
+    font: 14px/32px sans-serif;
+
+    min-height: 32px;
+    margin: 5px 0;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: green;
 }
 
-h1
+.level-2
 {
-    color: blue;
+    font: 14px/32px sans-serif;
+
+    min-height: 32px;
+    margin: 5px 0;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: darkcyan;
+}
+
+.level-3
+{
+    font: 14px/32px sans-serif;
+
+    min-height: 32px;
+    margin: 5px 0;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: indigo;
 }
 
 @font-face
