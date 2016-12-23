@@ -1,7 +1,6 @@
 @import "libs/libs";
 //sections
 @import "sections/style-guide";
-@import "sections/grid";
 @import "sections/animations";
 @import "sections/font-face";
 @import "sections/header";
@@ -11,7 +10,4 @@
 .no-scroll {
   height: 100vh;
   overflow: hidden;
-}
-body {
-  background-color: yellow;
 }
