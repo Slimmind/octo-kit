@@ -21,7 +21,7 @@ var changed = require('gulp-changed');
 
 var pages = '_*.html';
 var syncPages = '*.html';
-var startPage = 'testGULP.lo/menu.html';
+var startPage = 'testGULP-OLD.lo/menu.html';
 
 //gulp -p _home.html
 var _p = args.indexOf('-p');
