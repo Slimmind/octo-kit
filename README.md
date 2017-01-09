@@ -61,10 +61,13 @@
     var startPage = 'yourProjectName.lo/menu.html';
     ```
 
-11. *run gulp by command:*
+11. *run gulp for development by command:*
 
     ```
     gulp
     ```
+12. *run gulp for production by command:*
   
-12. *...and have a fun!*
+    ```
+    gulp prod
+    ```

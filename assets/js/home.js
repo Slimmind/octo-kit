@@ -4,7 +4,6 @@
   'use strict';
   var page = {
     init: function () {
-
     },
     noDev: function () {
       if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {

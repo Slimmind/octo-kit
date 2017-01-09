@@ -21,7 +21,7 @@ var changed = require('gulp-changed');
 
 var pages = '_*.html';
 var syncPages = '*.html';
-var startPage = 'testGULP-OLD.lo/menu.html';
+var startPage = 'projectName.lo/menu.html';
 
 //gulp -p _home.html
 var _p = args.indexOf('-p');
@@ -55,7 +55,7 @@ gulp.task('images', function () {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('images-dev', function () {
+gulp.task('images-prod', function () {
   return gulp.src('assets/images/**')
     .pipe(imageMin({
       progressive: true,
@@ -87,7 +87,7 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('scss-dev', function () {
+gulp.task('scss-prod', function () {
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
     .pipe(sass())
     .pipe(prefix('last 2 versions', '> 1%', 'ie 10'))
@@ -122,7 +122,7 @@ gulp.task('js', ['jscs', 'lint'], function () {
     .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('js-dev', ['jscs', 'lint'], function () {
+gulp.task('js-prod', ['jscs', 'lint'], function () {
   gulp.src(['assets/js/*.js'])
     .pipe(changed('dist/js'))
     .pipe(rigger())
@@ -152,7 +152,13 @@ gulp.task('watch', function () {
   gulp.watch('assets/css/**/*.scss', ['scss']);
 });
 
+gulp.task('watch-prod', function () {
+  gulp.watch('assets/js/**/*.js', ['js-prod']);
+  gulp.watch(pagesWatch, ['html']);
+  gulp.watch('assets/css/**/*.scss', ['scss-prod']);
+});
+
 // DEFAULT
 
 gulp.task('default', ['html', 'images', 'fonts', 'scss', 'js', 'serve', 'watch']);
-gulp.task('dev', ['html', 'images-dev', 'fonts', 'scss-dev', 'js-dev', 'watch']);
+gulp.task('prod', ['html', 'images-prod', 'fonts', 'scss-prod', 'js-prod', 'watch-prod']);
