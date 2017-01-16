@@ -25,23 +25,23 @@
     git init
     ```
 
-5. *download octoKIT and move it to your projectPath:*
-
-    ```
-    https://github.com/Slimmind/octoKIT/archive/slice.zip
-    ```
-6. *connect to your projectRepository:*
+5. *connect to your projectRepository:*
 
     ```
     git remote add origin yourProjectRepository
     ```
 
-7. *switch to needed git branch:*
+6. *switch to needed git branch:*
 
     ```
     git checkout -b slice
     ```
+7. *download octoKIT and move it to your projectPath:*
 
+    ```
+    https://github.com/Slimmind/octoKIT/archive/slice.zip
+    ```
+    
 8. *if you use NodeVersionManager, choose needed node version:*
 
     ```
