@@ -152,13 +152,7 @@ gulp.task('watch', function () {
   gulp.watch('assets/css/**/*.scss', ['scss']);
 });
 
-gulp.task('watch-prod', function () {
-  gulp.watch('assets/js/**/*.js', ['js-prod']);
-  gulp.watch(pagesWatch, ['html']);
-  gulp.watch('assets/css/**/*.scss', ['scss-prod']);
-});
-
 // DEFAULT
 
 gulp.task('default', ['html', 'images', 'fonts', 'scss', 'js', 'serve', 'watch']);
-gulp.task('prod', ['html', 'images-prod', 'fonts', 'scss-prod', 'js-prod', 'watch-prod']);
+gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);

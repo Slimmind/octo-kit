@@ -25,10 +25,10 @@
     git init
     ```
 
-5. *include remote repository with octoKIT to your project:*
+5. *download octoKIT and move it to your projectPath:*
 
     ```
-    git remote add origin git@github.com:Slimmind/octoKIT.git
+    https://github.com/Slimmind/octoKIT/archive/slice.zip
     ```
 
 6. *switch to needed git branch:*
