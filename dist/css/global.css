@@ -364,8 +364,6 @@ body
 {
     font: 12px/18px sans-serif;
 
-    cursor: pointer;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -507,18 +505,6 @@ input[type='checkbox']
 label
 {
     cursor: pointer;
-}
-
-.no-dev body
-{
-    cursor: auto;
-}
-
-.header_
-{
-    height: 100px;
-
-    background-color: green;
 }
 
 .content

@@ -11,7 +11,6 @@ body {
   font: 12px/18px sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: pointer;
 }
 main {
   position: relative;
@@ -117,7 +116,5 @@ label {
   cursor: pointer;
 }
 .no-dev {
-  body {
-    cursor: auto;
-  }
+
 }
