@@ -8,7 +8,7 @@ html, body {
 	width: 100%;
 }
 body {
-  font: 12px/18px 'montserratlight', sans-serif;
+  font: 12px/18px sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
@@ -52,33 +52,6 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-.buttons {
- 
-}
-.btn {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  @include dots();
-}
-.social-links {
-  li {
-    display: inline-block;
-    margin: 0 5px;
-  }
-}
-.social-link {
-  position: relative;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  svg {
-    @include pos(absolute, center, center);
-    width: 18px;
-    height: 18px;
-    transition: fill .5s ease;
-  }
-}
 ::-webkit-inner-spin-button { -webkit-appearance: none;}
 ::-webkit-outer-spin-button { -webkit-appearance: none;}
 ::-ms-clear {
@@ -100,8 +73,6 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: rgba(0,0,0,0);
-  outline: none;
   cursor: pointer;
 }
 ::-moz-placeholder {
