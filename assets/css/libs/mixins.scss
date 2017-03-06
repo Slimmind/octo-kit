@@ -111,6 +111,11 @@
     @content;
   }
 }
+@mixin xmob {
+  @media screen and(min-width: 375px) {
+    @content;
+  }
+}
 @mixin xxmob {
   @media screen and(min-width: 414px) {
     @content;
