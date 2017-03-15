@@ -124,7 +124,6 @@ gulp.task('js', ['jscs', 'lint'], function () {
 
 gulp.task('js-prod', ['jscs', 'lint'], function () {
   gulp.src(['assets/js/*.js'])
-    .pipe(changed('dist/js'))
     .pipe(rigger())
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
