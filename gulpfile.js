@@ -18,9 +18,11 @@ var rigger = require('gulp-rigger');
 
 var browserSync = require('browser-sync').create();
 var changed = require('gulp-changed');
+var gulpIgnore = require('gulp-ignore');
 
 var pages = '_*.html';
 var syncPages = '*.html';
+var fileCondition = '*.min.*';
 var startPage = 'octoKIT.lo/menu.html';
 
 //gulp -p _home.html
@@ -52,11 +54,13 @@ gulp.task('html', function () {
 
 gulp.task('images', function () {
   return gulp.src('assets/images/**')
+    .pipe(changed('dist/images'))
     .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('images-prod', function () {
   return gulp.src('assets/images/**')
+    .pipe(changed('dist/images'))
     .pipe(imageMin({
       progressive: true,
       svgoPlugins: [
@@ -80,7 +84,7 @@ gulp.task('scss', function () {
     .pipe(sass())
     .pipe(prefix('last 2 versions', '> 1%', 'ie 10'))
     .pipe(cmq({
-    	beautify: true
+      beautify: true
     }))
     .pipe(gulp.dest('dist/css'))
     .pipe(csscomb())
@@ -88,14 +92,8 @@ gulp.task('scss', function () {
 });
 
 gulp.task('scss-prod', function () {
-  gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
-    .pipe(sass())
-    .pipe(prefix('last 2 versions', '> 1%', 'ie 10'))
-    .pipe(cmq({
-    	beautify: true
-    }))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(csscomb())
+  gulp.src(['dist/css/*.css'])
+    .pipe(gulpIgnore.exclude(fileCondition))
     .pipe(cssMin())
     .pipe(rename({
       suffix: '.min'
@@ -123,9 +121,8 @@ gulp.task('js', ['jscs', 'lint'], function () {
 });
 
 gulp.task('js-prod', ['jscs', 'lint'], function () {
-  gulp.src(['assets/js/*.js'])
-    .pipe(rigger())
-    .pipe(gulp.dest('dist/js'))
+  gulp.src(['dist/js/*.js'])
+    .pipe(gulpIgnore.exclude(fileCondition))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
@@ -153,5 +150,5 @@ gulp.task('watch', function () {
 
 // DEFAULT
 
-gulp.task('default', ['html', 'images', 'fonts', 'scss', 'js', 'serve', 'watch']);
+gulp.task('default', ['html', 'images', 'fonts', 'scss', 'js', /*'serve',*/ 'watch']);
 gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);
