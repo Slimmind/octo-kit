@@ -507,6 +507,96 @@ label
     cursor: pointer;
 }
 
+.footer_
+{
+    padding: 70px 60px 15px;
+
+    color: #fff;
+    border-top: 3px solid #00aeef;
+    background-color: #000;
+}
+
+.footer_ .contact-info
+{
+    font: 14px/18px 'proxima_novasemibold', sans-serif;
+}
+
+.footer_ .logo
+{
+    margin-bottom: 20px;
+}
+
+.footer_ a
+{
+    color: #fff;
+}
+
+.footer_ address
+{
+    margin-bottom: 20px;
+}
+
+.footer_ address p
+{
+    margin-bottom: 10px;
+}
+
+.footer_ .contacts
+{
+    margin-bottom: 20px;
+}
+
+.footer_ .contacts a
+{
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.footer_ .social-links
+{
+    margin-bottom: 20px;
+}
+
+.footer_ .footer-nav
+{
+    display: none;
+}
+
+.footer_ .copy
+{
+    font: 14px/18px 'proxima_nova_rgregular', sans-serif;
+
+    clear: both;
+
+    color: #b9b9b9;
+}
+
+.no-dev .footer_
+{
+    overflow: hidden;
+}
+
+.no-dev .footer_ .contact-info
+{
+    float: left;
+}
+
+.no-dev .footer_ .footer-nav
+{
+    display: block;
+    float: right;
+
+    width: 75%;
+}
+
+.no-dev .footer_ .footer-nav li
+{
+    display: inline-block;
+
+    width: 33%;
+}
+
 .content
 {
     font: 12px/20px 'open_sansregular', sans-serif;
@@ -661,6 +751,66 @@ label
     height: 100vh;
 }
 
+.container
+{
+    width: 100%;
+    max-width: 998px;
+    margin: 0 auto;
+}
+
+.logo
+{
+    display: inline-block;
+
+    width: 100px;
+    height: 24px;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.social-links ul
+{
+    font-size: 0;
+    line-height: 0;
+
+    letter-spacing: -5px;
+}
+
+.social-links ul > *
+{
+    display: inline-block;
+
+    letter-spacing: normal;
+}
+
+.social-links li
+{
+    display: inline-block;
+
+    margin: 0 15px 5px 0;
+}
+
+.social-links li:last-child
+{
+    margin-right: 0;
+}
+
+.social-links a
+{
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .5);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+}
+
 html,
 body
 {
@@ -673,7 +823,7 @@ main
 
     min-height: 100%;
 
-    background-color: #867d20;
+    background-color: #838d5e;
 }
 
 main:before
@@ -694,14 +844,29 @@ main:before
 
 @font-face
 {
-    font-family: 'open_sansregular';font-weight: normal;font-style: normal;src: url('../fonts/opensans-regular-webfont.eot');src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-family: 'proxima_nova_rgbold';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-bold-webfont.eot');src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-bold-webfont.woff2') format('woff2'), url('../fonts/proximanova-bold-webfont.woff') format('woff'), url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+}
+
+@font-face
+{
+    font-family: 'proxima_novaregular_italic';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-regitalic-webfont.eot');src: url('../fonts/proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regitalic-webfont.woff2') format('woff2'), url('../fonts/proximanova-regitalic-webfont.woff') format('woff'), url('../fonts/proximanova-regitalic-webfont.svg#proxima_novaregular_italic') format('svg');
+}
+
+@font-face
+{
+    font-family: 'proxima_nova_rgregular';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-regular-webfont.eot');src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regular-webfont.woff2') format('woff2'), url('../fonts/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+}
+
+@font-face
+{
+    font-family: 'proxima_novasemibold';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-semibold-webfont.eot');src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-semibold-webfont.woff2') format('woff2'), url('../fonts/proximanova-semibold-webfont.woff') format('woff'), url('../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
 }
 
 @media screen and (min-width: 375px)
 {
     main
     {
-        background-color: #734228;
+        background-color: #736f08;
     }
 
     main:before
@@ -714,7 +879,7 @@ main:before
 {
     main
     {
-        background-color: #644749;
+        background-color: #3a7c31;
     }
 
     main:before
@@ -727,7 +892,7 @@ main:before
 {
     main
     {
-        background-color: #6e4705;
+        background-color: #957849;
     }
 
     main:before
@@ -740,7 +905,7 @@ main:before
 {
     main
     {
-        background-color: #319b96;
+        background-color: #262544;
     }
 
     main:before
@@ -753,7 +918,7 @@ main:before
 {
     main
     {
-        background-color: #8b3e12;
+        background-color: #98264a;
     }
 
     main:before
@@ -766,7 +931,7 @@ main:before
 {
     main
     {
-        background-color: #16581c;
+        background-color: #15355e;
     }
 
     main:before
@@ -779,7 +944,7 @@ main:before
 {
     main
     {
-        background-color: #5d8601;
+        background-color: #992036;
     }
 
     main:before
@@ -798,7 +963,7 @@ main:before
 
     main
     {
-        background-color: #6f8c37;
+        background-color: #0b4465;
     }
 
     main:before
@@ -811,7 +976,7 @@ main:before
 {
     main
     {
-        background-color: #23933e;
+        background-color: #794308;
     }
 
     main:before
@@ -844,7 +1009,7 @@ main:before
 
     main
     {
-        background-color: #3f7f0e;
+        background-color: #4a4e8d;
     }
 
     main:before
@@ -857,7 +1022,7 @@ main:before
 {
     main
     {
-        background-color: #78554b;
+        background-color: #3d265a;
     }
 
     main:before
@@ -876,7 +1041,7 @@ main:before
 
     main
     {
-        background-color: #2d4b71;
+        background-color: #241522;
     }
 
     main:before
@@ -889,7 +1054,7 @@ main:before
 {
     main
     {
-        background-color: #989b2d;
+        background-color: #04707c;
     }
 
     main:before
