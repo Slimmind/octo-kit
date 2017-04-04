@@ -22,8 +22,8 @@ var gulpIgnore = require('gulp-ignore');
 
 var pages = '_*.html';
 var syncPages = '*.html';
-var fileCondition = '*.min.*';
-var startPage = 'octoKIT.lo/menu.html';
+var minFilesCondition = '*.min.*';
+var startPage = 'mark43.lo/menu.html';
 
 //gulp -p _home.html
 var _p = args.indexOf('-p');
@@ -93,7 +93,7 @@ gulp.task('scss', function () {
 
 gulp.task('scss-prod', function () {
   gulp.src(['dist/css/*.css'])
-    .pipe(gulpIgnore.exclude(fileCondition))
+    .pipe(gulpIgnore.exclude(minFilesCondition))
     .pipe(cssMin())
     .pipe(rename({
       suffix: '.min'
@@ -122,7 +122,7 @@ gulp.task('js', ['jscs', 'lint'], function () {
 
 gulp.task('js-prod', ['jscs', 'lint'], function () {
   gulp.src(['dist/js/*.js'])
-    .pipe(gulpIgnore.exclude(fileCondition))
+    .pipe(gulpIgnore.exclude(minFilesCondition))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'

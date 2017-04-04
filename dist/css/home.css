@@ -516,7 +516,7 @@ label
 {
     padding: 20px;
 
-    background-color: #666;
+    background-color: #1e272f;
 }
 
 .content p
@@ -528,12 +528,7 @@ label
 {
     transition: color .3s ease;
 
-    color: #666;
-}
-
-.content p a:hover
-{
-    color: #6ea73b;
+    color: #1e272f;
 }
 
 .content ul,
@@ -551,7 +546,7 @@ label
 
     list-style: none;
 
-    color: #666;
+    color: #1e272f;
 }
 
 .content ul li
