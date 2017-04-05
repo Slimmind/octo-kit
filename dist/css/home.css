@@ -1201,7 +1201,7 @@ label
 
 .top-wrap
 {
-    height: 480px;
+    min-height: 480px;
 
     background-color: #0d1f40;
 }
@@ -1217,7 +1217,9 @@ label
 
     overflow: hidden;
 
+    width: 280px;
     height: calc(280px / 16 * 9);
+    margin: 0 auto;
     padding: 0 20px;
 }
 

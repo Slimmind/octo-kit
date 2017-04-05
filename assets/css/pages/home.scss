@@ -4,7 +4,7 @@
 //sections
 
 .top-wrap {
-  height: 480px;
+  min-height: 480px;
   background-color: $color-dark-blue;
 }
 .top-bg {
@@ -12,6 +12,8 @@
 }
 .video-wrap {
   position: relative;
+  width: 280px;
+  margin: 0 auto;
   height: calc(280px / 16 * 9);
   overflow: hidden;
   padding: 0 20px;
