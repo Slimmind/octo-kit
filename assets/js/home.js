@@ -4,6 +4,7 @@
   'use strict';
   var page = {
     init: function () {
+      page.videoPlayer();
     },
     noDev: function () {
       if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
@@ -12,6 +13,9 @@
     },
     isDev: function () {
       return !$('html').hasClass('no-dev') || window.innerWidth < 1280;
+    },
+    videoPlayer: function () {
+      var clip = document.getElementById('clip');
     },
     load: function () {
     },

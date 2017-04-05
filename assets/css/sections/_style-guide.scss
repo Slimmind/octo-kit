@@ -115,6 +115,29 @@ input[type="checkbox"] {
 label {
   cursor: pointer;
 }
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  max-width: 244px;
+  height: 36px;
+  padding: 7px 20px;
+  font: 14px/18px $font-proxima-medium;
+  text-align: center;
+  color: $color-light-blue;
+  border: 2px solid $color-light-blue;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include dots;
+}
 .no-dev {
-
+  .btn {
+    transition-property: color, background-color;
+    transition: .3s ease;
+    &:hover {
+      background-color: $color-light-blue;
+      color: $color-black;
+    }
+  }
 }

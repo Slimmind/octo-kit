@@ -3,6 +3,20 @@
 @import "../libs/mixins";
 //sections
 
+.top-wrap {
+  height: 480px;
+  background-color: $color-dark-blue;
+}
+.top-bg {
+  margin-bottom: 30px;
+}
+.video-wrap {
+  position: relative;
+  height: calc(280px / 16 * 9);
+  overflow: hidden;
+  padding: 0 20px;
+}
+
 
 
 
