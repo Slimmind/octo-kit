@@ -23,7 +23,7 @@ var gulpIgnore = require('gulp-ignore');
 var pages = '_*.html';
 var syncPages = '*.html';
 var minFilesCondition = '*.min.*';
-var startPage = 'mark43.lo/menu.html';
+var startPage = 'octoKIT.lo/menu.html';
 
 //gulp -p _home.html
 var _p = args.indexOf('-p');
