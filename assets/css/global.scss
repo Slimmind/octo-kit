@@ -1,0 +1,44 @@
+@import "libs/libs";
+//sections
+@import "sections/style-guide";
+@import "sections/animations";
+@import "sections/font-face";
+@import "sections/header";
+@import "sections/footer";
+@import "sections/wp-styles";
+
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  max-width: 998px;
+  margin: 0 auto;
+}
+.logo {
+  display: inline-block;
+  width: 100px;
+  height: 24px;
+  @include bg(center, center, contain);
+}
+.social-links {
+  ul {
+    @include inlined();
+  }
+  li {
+    display: inline-block;
+    margin: 0 15px 5px 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba($color-white, .5);
+    @include bg(center, center, 60%);
+  }
+}
