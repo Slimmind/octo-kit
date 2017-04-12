@@ -90,6 +90,11 @@
 }
 
 // -- MEDIA QUERIES
+@mixin ie {
+  @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
 @mixin mob-landscape {
   @media screen and(min-width: 480px) and (orientation: landscape) {
     @content;
