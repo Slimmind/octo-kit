@@ -507,106 +507,14 @@ label
     cursor: pointer;
 }
 
-.footer_
-{
-    padding: 70px 60px 15px;
-
-    color: #fff;
-    border-top: 3px solid #00aeef;
-    background-color: #000;
-}
-
-.footer_ .contact-info
-{
-    font: 14px/18px 'proxima_novasemibold', sans-serif;
-}
-
-.footer_ .logo
-{
-    margin-bottom: 20px;
-}
-
-.footer_ a
-{
-    color: #fff;
-}
-
-.footer_ address
-{
-    margin-bottom: 20px;
-}
-
-.footer_ address p
-{
-    margin-bottom: 10px;
-}
-
-.footer_ .contacts
-{
-    margin-bottom: 20px;
-}
-
-.footer_ .contacts a
-{
-    display: block;
-
-    margin-bottom: 10px;
-}
-
-.footer_ .social-links
-{
-    margin-bottom: 20px;
-}
-
-.footer_ .footer-nav
-{
-    display: none;
-}
-
-.footer_ .copy
-{
-    font: 14px/18px 'proxima_nova_rgregular', sans-serif;
-
-    clear: both;
-
-    color: #b9b9b9;
-}
-
-.no-dev .footer_
-{
-    overflow: hidden;
-}
-
-.no-dev .footer_ .contact-info
-{
-    float: left;
-}
-
-.no-dev .footer_ .footer-nav
-{
-    display: block;
-    float: right;
-
-    width: 75%;
-}
-
-.no-dev .footer_ .footer-nav li
-{
-    display: inline-block;
-
-    width: 33%;
-}
-
 .content
 {
-    font: 12px/20px 'open_sansregular', sans-serif;
+    font: 12px/20px sans-serif;
 }
 
 .content .buttons
 {
     padding: 20px;
-
-    background-color: #1e272f;
 }
 
 .content p
@@ -617,8 +525,6 @@ label
 .content p a
 {
     transition: color .3s ease;
-
-    color: #1e272f;
 }
 
 .content ul,
@@ -635,8 +541,6 @@ label
     padding: 5px 0 0 20px;
 
     list-style: none;
-
-    color: #1e272f;
 }
 
 .content ul li
@@ -651,7 +555,7 @@ label
 
 .content ul li:before
 {
-    font: 16px/22px 'Montserrat-Regular', sans-serif;
+    font: 16px/22px sans-serif;
 
     position: absolute;
     top: 0;
@@ -746,9 +650,38 @@ label
 
 .no-scroll
 {
+    position: relative;
+
     overflow: hidden;
 
     height: 100vh;
+}
+
+.wrapper
+{
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+        flex-direction: column;
+
+    min-height: 100vh;
+
+    -ms-flex-direction: column;
+}
+
+.header_,
+.footer_
+{
+    -ms-flex: none;
+        flex: none;
+}
+
+.page-wrap
+{
+    overflow: hidden;
+
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
 }
 
 .container
@@ -809,26 +742,6 @@ label
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 60%;
-}
-
-@font-face
-{
-    font-family: 'proxima_nova_rgbold';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-bold-webfont.eot');src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-bold-webfont.woff2') format('woff2'), url('../fonts/proximanova-bold-webfont.woff') format('woff'), url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
-}
-
-@font-face
-{
-    font-family: 'proxima_novaregular_italic';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-regitalic-webfont.eot');src: url('../fonts/proximanova-regitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regitalic-webfont.woff2') format('woff2'), url('../fonts/proximanova-regitalic-webfont.woff') format('woff'), url('../fonts/proximanova-regitalic-webfont.svg#proxima_novaregular_italic') format('svg');
-}
-
-@font-face
-{
-    font-family: 'proxima_nova_rgregular';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-regular-webfont.eot');src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regular-webfont.woff2') format('woff2'), url('../fonts/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
-}
-
-@font-face
-{
-    font-family: 'proxima_novasemibold';font-weight: normal;font-style: normal;src: url('../fonts/proximanova-semibold-webfont.eot');src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-semibold-webfont.woff2') format('woff2'), url('../fonts/proximanova-semibold-webfont.woff') format('woff'), url('../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
 }
 
 @media screen and (min-width: 768px)

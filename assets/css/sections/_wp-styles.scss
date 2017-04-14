@@ -4,15 +4,12 @@
   font: 12px/20px sans-serif;
   .buttons {
     padding: 20px;
-    //background-color: $color-dark-gray;
   }
   p {
     margin-bottom: 10px;
     a {
-      color: $color-dark-gray;
       transition: color .3s ease;
       &:hover {
-        //color: $color-green;
       }
     }
   }
@@ -22,7 +19,6 @@
     ul,
     ol {
       list-style: none;
-      //color: $color-dark-gray;
       padding: 5px 0 0 20px;
     }
   }
