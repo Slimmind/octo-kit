@@ -20,10 +20,13 @@ var browserSync = require('browser-sync').create();
 var changed = require('gulp-changed');
 var gulpIgnore = require('gulp-ignore');
 
+var clean = require('gulp-clean');
+//var taskSequence = require('gulp-sequence');
+
 var pages = '_*.html';
 var syncPages = '*.html';
 var minFilesCondition = '*.min.*';
-var startPage = 'octoKIT.lo/menu.html';
+var startPage = 'devKIT.lo/menu.html';
 
 //gulp -p _home.html
 var _p = args.indexOf('-p');
@@ -139,6 +142,12 @@ gulp.task('serve', function () {
   browserSync.watch(['dist/**/*.*', syncPages]).on('change', browserSync.reload)
 
 });
+
+// CLEAN
+gulp.task('clean', function () {
+  gulp.src('dist/**/**.**', {read: false})
+  .pipe(clean())
+} );
 
 // WATCH
 
