@@ -154,5 +154,7 @@ gulp.task('watch', function () {
 
 // DEFAULT
 
-gulp.task('default', taskSequence('clean', 'html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch'));
-gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);
+// gulp.task('default', taskSequence('clean', 'html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch'));
+// gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);
+gulp.task('default', ['html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch']);
+gulp.task('prod', taskSequence('clean', ['scss', 'js'], ['images-prod', 'scss-prod', 'js-prod']));
