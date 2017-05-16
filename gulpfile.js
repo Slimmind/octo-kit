@@ -59,7 +59,7 @@ gulp.task('images', function () {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('images-prod', function () {
+gulp.task('images-prod', ['cleanImg'], function () {
   return gulp.src('assets/images/**')
     .pipe(imageMin({
       progressive: true,
@@ -144,6 +144,11 @@ gulp.task('clean', function () {
   .pipe(clean())
 } );
 
+gulp.task('cleanImg', function () {
+  gulp.src('dist/images/*.*', {read: false})
+    .pipe(clean())
+} );
+
 // WATCH
 gulp.task('watch', function () {
   gulp.watch('assets/js/**/*.js', ['js']);
@@ -155,5 +160,3 @@ gulp.task('watch', function () {
 
 gulp.task('default', taskSequence('clean', 'html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch'));
 gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);
-// gulp.task('default', ['html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch']);
-// gulp.task('prod', taskSequence('clean', ['scss', 'js', 'fonts'], ['images-prod', 'scss-prod', 'js-prod']));
