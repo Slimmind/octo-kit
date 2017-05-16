@@ -158,5 +158,5 @@ gulp.task('watch', function () {
 
 // DEFAULT
 
-gulp.task('default', taskSequence('clean', 'html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch'));
+gulp.task('default', taskSequence('clean', 'html', 'images', 'fonts', 'scss', 'js', /*'serve',*/ 'watch'));
 gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);
