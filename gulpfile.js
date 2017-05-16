@@ -61,7 +61,6 @@ gulp.task('images', function () {
 
 gulp.task('images-prod', function () {
   return gulp.src('assets/images/**')
-    .pipe(changed('dist/images'))
     .pipe(imageMin({
       progressive: true,
       svgoPlugins: [
@@ -141,7 +140,7 @@ gulp.task('serve', function () {
 
 // CLEAN
 gulp.task('clean', function () {
-  gulp.src(['dist/images/*.*','dist/js/*.*','dist/css/*.*'], {read: false})
+  gulp.src(['dist/images/*.*','dist/js/*.*','dist/css/*.*', 'dist/fonts/**'], {read: false})
   .pipe(clean())
 } );
 
@@ -154,7 +153,7 @@ gulp.task('watch', function () {
 
 // DEFAULT
 
-// gulp.task('default', taskSequence('clean', 'html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch'));
-// gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);
-gulp.task('default', ['html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch']);
-gulp.task('prod', taskSequence('clean', ['scss', 'js'], ['images-prod', 'scss-prod', 'js-prod']));
+gulp.task('default', taskSequence('clean', 'html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch'));
+gulp.task('prod', ['images-prod', 'scss-prod', 'js-prod']);
+// gulp.task('default', ['html', 'fonts', 'images', 'scss', 'js', /*'serve',*/ 'watch']);
+// gulp.task('prod', taskSequence('clean', ['scss', 'js', 'fonts'], ['images-prod', 'scss-prod', 'js-prod']));
