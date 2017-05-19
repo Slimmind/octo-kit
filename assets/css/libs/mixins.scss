@@ -1,5 +1,15 @@
 @import "variables";
 
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
 @mixin dots(){
   //display: block;
   white-space: nowrap;
