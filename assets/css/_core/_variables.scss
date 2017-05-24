@@ -1,4 +1,4 @@
-
+@import "../libs/variables";
 /*
     ==== GRID ====
 */
@@ -17,21 +17,29 @@ $grid-padding:         20px !default;
 
 //== Media queries
 
+
+
+// !!!replaced with variables from /libs/variables!!!
+
 // mobile
-$screen-mobile:                  640px !default;
+$screen-mobile:                  $small-breakpoint !default;
 $screen-mobile-min:              $screen-mobile !default;
 
 // tablet
-$screen-tablet:                  768px !default;
+$screen-tablet:                  $xsmall-breakpoint !default;
 $screen-tablet-min:              $screen-tablet !default;
 
 // laptop
-$screen-laptop:                  $grid-default !default;
+$screen-laptop:                  $medium-breakpoint !default;
 $screen-laptop-min:              $screen-laptop !default;
 
 // desktop
-$screen-desktop:                  1200px !default;
+$screen-desktop:                  $xmedium-breakpoint !default;
 $screen-desktop-min:              $screen-desktop !default;
+
+// !!!replaced with variables from /libs/variables!!!
+
+
 
 // минимальные и максимальные значения
 $screen-mobile-max:              ($screen-tablet-min - 1) !default;
