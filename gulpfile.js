@@ -26,7 +26,7 @@ var taskSequence = require('gulp-sequence');
 var pages = '_*.html';
 var syncPages = '*.html';
 var minFilesCondition = '*.min.*';
-var startPage = 'test.lo/menu.html';
+var startPage = 'octoKit.lo/menu.php';
 
 //gulp -p _home.html
 var _p = args.indexOf('-p');
