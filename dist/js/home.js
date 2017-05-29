@@ -28,6 +28,4 @@
     'scroll': page.scroll
   });
 
-  window.isDevice = page.isDev;
-
 })(jQuery, window, document);

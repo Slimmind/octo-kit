@@ -59,7 +59,7 @@ gulp.task('images', function () {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('images-prod', ['cleanImg'], function () {
+gulp.task('images-prod'/*, ['cleanImg']*/, function () {
   return gulp.src('assets/images/**')
     .pipe(imageMin({
       progressive: true,
@@ -140,7 +140,7 @@ gulp.task('serve', function () {
 
 // CLEAN
 gulp.task('clean', function () {
-  gulp.src(['dist/images/*.*','dist/js/*.*','dist/css/*.*', 'dist/fonts/**'], {read: false})
+  gulp.src(['dist'], {read: false})
   .pipe(clean())
 } );
 
