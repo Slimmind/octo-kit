@@ -85,7 +85,7 @@
 ////
 @mixin lg-grid($a){
   @if ($a == true) {
-    @media (min-width: $screen-desktop-min) {
+    @media (min-width: $large-breakpoint) { //1600
       @include make-grid(lg);
     }
   }

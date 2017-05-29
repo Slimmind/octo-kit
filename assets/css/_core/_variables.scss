@@ -3,11 +3,15 @@
     ==== GRID ====
 */
 
-// ширина сетки
-$grid-default-s: 998px;
-$grid-default: 1025px;
-// горизонтальные padding для @media (max-width: $screen-tablet-max){}
-$padding-tablet: 20px;
+// ширина контейнера
+$container-sm: 100%;
+$container-m: 960px;
+$container-xm: 1170px;
+$container-l: 1400px;
+$container-xl: 1700px;
+
+// горизонтальные padding для @media $medium-breakpoint
+$padding-lap: 15px;
 
 // количество колонок
 $grid-columns:         12 !default;
@@ -15,54 +19,8 @@ $grid-columns:         12 !default;
 $grid-padding:         20px !default;
 
 
-//== Media queries
-
-
-
-// !!!replaced with variables from /libs/variables!!!
-
-// mobile
-$screen-mobile:                  $small-breakpoint !default;
-$screen-mobile-min:              $screen-mobile !default;
-
-// tablet
-$screen-tablet:                  $xsmall-breakpoint !default;
-$screen-tablet-min:              $screen-tablet !default;
-
-// laptop
-$screen-laptop:                  $medium-breakpoint !default;
-$screen-laptop-min:              $screen-laptop !default;
-
-// desktop
-$screen-desktop:                  $xmedium-breakpoint !default;
-$screen-desktop-min:              $screen-desktop !default;
-
-// !!!replaced with variables from /libs/variables!!!
-
-
-
-// минимальные и максимальные значения
-$screen-mobile-max:              ($screen-tablet-min - 1) !default;
-$screen-tablet-max:              ($screen-laptop-min - 1) !default;
-$screen-laptop-max:              ($screen-desktop-min - 1) !default;
-
-//== Container sizes
-// .container tablet
-$container-tablet:             100% !default;
-$container-sm:                 $container-tablet !default;
-
-// .container laptop
-$container-desktop:            $grid-default-s !default;
-$container-md:                 (($container-desktop + $grid-padding)) !default; //
-
-// .container desktop
-$container-large-desktop:      (($grid-default + $grid-padding)) !default;
-$container-lg:                 $container-large-desktop !default;
-$container-xlg:                $container-large-desktop !default;
-
-
 //== Компиляция классов для сетки
-// классы колонок .lg для @media (min-width: $screen-desktop) {}
+// классы колонок .lg для @media $large-breakpoint
 $lg-grid : true;
 // классы offset для колонок
 $offset-class : false;

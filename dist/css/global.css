@@ -13,7 +13,7 @@
 
 .container
 {
-    box-sizing: border-box;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-right: 10px;
@@ -1436,94 +1436,20 @@ img.aligncenter
     height: 100vh;
 }
 
-.wrapper
+@font-face
 {
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-        flex-direction: column;
-
-    min-height: 100vh;
-
-    -ms-flex-direction: column;
-}
-
-.header_,
-.footer_
-{
-    -ms-flex: none;
-        flex: none;
-}
-
-.page-wrap
-{
-    overflow: hidden;
-
-    -ms-flex: 1 0 auto;
-        flex: 1 0 auto;
-}
-
-.container
-{
-    width: 100%;
-    max-width: 998px;
-    margin: 0 auto;
-}
-
-.logo
-{
-    display: inline-block;
-
-    width: 100px;
-    height: 24px;
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-}
-
-.social-links ul
-{
-    font-size: 0;
-    line-height: 0;
-
-    letter-spacing: -5px;
-}
-
-.social-links ul > *
-{
-    display: inline-block;
-
-    letter-spacing: normal;
-}
-
-.social-links li
-{
-    display: inline-block;
-
-    margin: 0 15px 5px 0;
-}
-
-.social-links li:last-child
-{
-    margin-right: 0;
-}
-
-.social-links a
-{
-    display: block;
-
-    width: 40px;
-    height: 40px;
-
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, .5);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 60%;
+    font-family: 'font-family-name';font-weight: normal;font-style: normal;src: url('../fonts/font-name.eot');src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'), url('../fonts/font-name.woff2') format('woff2'), url('../fonts/font-name.woff') format('woff'), url('../fonts/font-name.ttf') format('truetype'), url('../fonts/font-name.svg#encode_sans_compressedregular') format('svg');
 }
 
 @media (min-width: 640px)
+{
+    .container
+    {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px)
 {
     .container
     {
@@ -1607,11 +1533,13 @@ img.aligncenter
     }
 }
 
-@media (min-width: 768px)
+@media (min-width: 1025px)
 {
     .container
     {
-        width: 100%;
+        width: 960px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 
     .lap-1,
@@ -1691,11 +1619,11 @@ img.aligncenter
     }
 }
 
-@media (min-width: 1025px)
+@media (min-width: 1200px)
 {
     .container
     {
-        width: 1018px;
+        width: 1170px;
     }
 
     .desk-1,
@@ -1775,8 +1703,13 @@ img.aligncenter
     }
 }
 
-@media (min-width: 1200px)
+@media (min-width: 1600px)
 {
+    .container
+    {
+        width: 1400px;
+    }
+
     .lg-1,
     .lg-2,
     .lg-3,
@@ -1854,12 +1787,11 @@ img.aligncenter
     }
 }
 
-@media (max-width: 1024px)
+@media (min-width: 1800px)
 {
     .container
     {
-        padding-right: 20px;
-        padding-left: 20px;
+        width: 1700px;
     }
 }
 
