@@ -121,7 +121,9 @@ gulp.task('lint', function () {
 
 gulp.task('js', ['jscs', 'lint'], function () {
   gulp.src(['assets/js/*.js'])
+    .pipe(sourceMaps.init())
     .pipe(rigger())
+    .pipe(sourceMaps.write())
     .pipe(gulp.dest('dist/js'));
 });
 

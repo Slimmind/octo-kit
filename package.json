@@ -1,6 +1,6 @@
 {
   "name": "octoKIT",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "repository": "git@github.com:Slimmind/octo-kit.git",
   "author": "BigDropInc",
@@ -14,7 +14,6 @@
     "gulp-combine-mq": "^0.4.0",
     "gulp-concat": "^2.4.3",
     "gulp-csscomb": "^3.0.3",
-    "gulp-ignore": "^2.0.2",
     "gulp-imagemin": "^2.1.0",
     "gulp-jscs": "^1.4.0",
     "gulp-jshint": "^1.9.2",
