@@ -149,7 +149,7 @@ gulp.task('serve', function () {
 
 // CLEAN
 gulp.task('clean', function () {
-  gulp.src(['dist'], {read: false})
+  gulp.src(['dist/**/*.*'], {read: false})
   .pipe(clean())
 } );
 
@@ -162,5 +162,5 @@ gulp.task('watch', function () {
 
 // DEFAULT
 
-gulp.task('default', ['html', 'images', 'fonts', 'scss', 'js', /*'serve',*/ 'watch']);
-gulp.task('prod', taskSequence('clean', 'fonts', 'images-prod', 'scss-prod', 'js-prod'));
+gulp.task('default', taskSequence('clean', 'html', 'images', 'fonts', 'scss', 'js', /*'serve',*/ 'watch'));
+gulp.task('prod', ['fonts', 'images-prod', 'scss-prod', 'js-prod']);
