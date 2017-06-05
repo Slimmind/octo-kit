@@ -19,7 +19,7 @@ var rigger = require('gulp-rigger');
 var browserSync = require('browser-sync').create();
 var changed = require('gulp-changed');
 
-var clean = require('gulp-clean');
+var del = require('del');
 var taskSequence = require('gulp-sequence');
 var sourceMaps = require('gulp-sourcemaps')
 
@@ -149,8 +149,7 @@ gulp.task('serve', function () {
 
 // CLEAN
 gulp.task('clean', function () {
-  gulp.src(['dist/**/*.*'], {read: false})
-  .pipe(clean())
+  del.sync(['dist/**']);
 } );
 
 // WATCH
