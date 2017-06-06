@@ -4,7 +4,7 @@
 ?>
 <style>
     body {
-        background: url('bg.png');
+        background: url('https://cdn.dribbble.com/users/162759/screenshots/2680829/underthesea_1x.jpg');
     }
     ol {
         width: 100%;
@@ -22,18 +22,19 @@
         font-family: sans-serif;
         font-size: 20px;
         line-height: 24px;
-        border-radius: 5px;
-        border: 1px solid #aeaeae;
+        border-radius: 20px;
+        border: 4px solid #fff;
         padding: 5px 15px;
         width: auto;
-        color: #005689;
-        background-color: rgba(0, 100, 120, .5);
+        color: #fff;
+        background-color: #1DB6BB;
         text-decoration: none;
-        transition-property: color, background-color;
-        transition: .3s linear;
+        transition-property: border-color, background-color;
+        transition: .3s ease;
     }
     ol a:hover {
         background-color: rgba(0, 100, 120, .8);
+        border-color: #1DB6BB;
         color: #fff;
     }
         
