@@ -21,12 +21,7 @@ var changed = require('gulp-changed');
 
 var del = require('del');
 var taskSequence = require('gulp-sequence');
-var sourceMaps = require('gulp-sourcemaps')
-
-var webpackStream = require('webpack-stream');
-var webpack = webpackStream.webpack;
-var named = require('vinyl-named');
-var plumber = require('gulp-plumber');
+var sourceMaps = require('gulp-sourcemaps');
 
 var pages = '_*.html';
 var syncPages = '*.html';
@@ -155,36 +150,6 @@ gulp.task('serve', function () {
 // CLEAN
 gulp.task('clean', function () {
   del.sync(['dist/**']);
-} );
-
-// WEBPACK
-gulp.task('webpack', function () {
-  var option = {
-    watch: true,
-    devtool: 'cheap-module-inline-source-map',
-    module:{
-      loaders: [{
-        test: /\.js$/,
-        include: path.join(__dirname, 'assets'),
-        loader: 'babel?presets[]=es2015'
-      }]
-    },
-    plugins: [
-      new webpack.NoErrorsPlugin()
-    ]
-  };
-  gulp.src('assets/js/*.js')
-    .pipe(plumber({
-      errorHandler: notify.onError(function (err) {
-        return ({
-          title: 'Webpack',
-          message: err.message
-        })
-      })
-    }))
-    .pipe(named())
-    .pipk(webpackStream(options))
-    .pipe(gulp.dest('dist/js'))
 } );
 
 // WATCH
