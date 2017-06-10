@@ -7,6 +7,4 @@ bower_components
 **/.DS_Store
 logs
 log
-yarn.*
-
-
+yarn.lock
