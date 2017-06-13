@@ -22,6 +22,9 @@ var changed = require('gulp-changed');
 var del = require('del');
 var taskSequence = require('gulp-sequence');
 var sourceMaps = require('gulp-sourcemaps');
+var debug = require('gulp-debug');
+var notify = require('gulp-notify');
+var plumber = require('gulp-plumber');
 
 var pages = '_*.html';
 var syncPages = '*.html';
@@ -78,6 +81,15 @@ gulp.task('fonts', function () {
 // CSS
 gulp.task('scss', function () {
   gulp.src(['assets/css/global.scss', 'assets/css/pages/*.scss'])
+    .pipe(plumber({
+      errorHandler: notify.onError(function (err) {
+        return {
+          title: 'SCSS',
+          message: err.message
+        }
+      })
+    }))
+    .pipe(debug({title: 'src'}))
     .pipe(sourceMaps.init())
     .pipe(changed('dist/css'))
     .pipe(sass())
@@ -88,6 +100,7 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('dist/css'))
     .pipe(csscomb())
     .pipe(sourceMaps.write())
+    .pipe(debug({title: 'dest'}))
     .pipe(gulp.dest('dist/css'));
 });
 
