@@ -1,3 +1,12 @@
 .footer_ {
-
+  position: relative;
+  height: 100px;
+  background-color: rebeccapurple;
+  &:after {
+    content: "footer";
+    @include pos(absolute, center, center);
+    font-size: 24px;
+    line-height: 28px;
+    color: $color-white;
+  }
 }

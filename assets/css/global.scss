@@ -7,3 +7,22 @@
 @import "sections/header";
 @import "sections/footer";
 @import "sections/wp-styles";
+//
+main {
+  @include flex(column);
+  flex-shrink: 0;
+  flex-grow: 1;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.header_,
+.footer_ {
+  flex-shrink: 0;
+}
+
+.page-wrap {
+  flex-shrink: 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
