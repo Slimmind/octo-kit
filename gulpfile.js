@@ -54,7 +54,7 @@ gulp.task('html', function () {
     .pipe(gulp.dest(''));
 });
 
-// Images, Fonts
+// IMAGES
 gulp.task('images', function () {
   return gulp.src('assets/images/**')
     .pipe(changed('dist/images'))
@@ -70,9 +70,11 @@ gulp.task('images-prod', function () {
       ],
       use: [pngCrush()]
     }))
+    .pipe(debug({title: 'dest'}))
     .pipe(gulp.dest('dist/images'));
 });
 
+// FONTS
 gulp.task('fonts', function () {
   gulp.src('assets/fonts/**')
     .pipe(gulp.dest('dist/fonts'));
@@ -89,7 +91,6 @@ gulp.task('scss', function () {
         }
       })
     }))
-    .pipe(debug({title: 'src'}))
     .pipe(sourceMaps.init())
     .pipe(changed('dist/css'))
     .pipe(sass())
@@ -100,7 +101,6 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('dist/css'))
     .pipe(csscomb())
     .pipe(sourceMaps.write())
-    .pipe(debug({title: 'dest'}))
     .pipe(gulp.dest('dist/css'));
 });
 
@@ -117,6 +117,7 @@ gulp.task('scss-prod', function () {
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(debug({title: 'dest'}))
     .pipe(gulp.dest('dist/css'));
 });
 
@@ -147,6 +148,7 @@ gulp.task('js-prod', ['jscs', 'lint'], function () {
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(debug({title: 'dest'}))
     .pipe(gulp.dest('dist/js'));
 });
 
@@ -175,4 +177,4 @@ gulp.task('watch', function () {
 // DEFAULT
 
 gulp.task('default', taskSequence('clean', 'html', 'images', 'fonts', 'scss', 'js', /*'serve',*/ 'watch'));
-gulp.task('prod', ['fonts', 'images-prod', 'scss-prod', 'js-prod']);
+gulp.task('prod', taskSequence('fonts', 'images-prod', 'scss-prod', 'js-prod'));
