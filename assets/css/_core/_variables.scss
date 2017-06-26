@@ -23,7 +23,7 @@ $grid-padding:         20px !default;
 // классы колонок .lg для @media $large-breakpoint
 $lg-grid : true;
 // классы offset для колонок
-$offset-class : false;
+$offset-class : true;
 // классы push и pull для колонок
 $pull_push-class: false;
 
