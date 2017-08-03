@@ -4,7 +4,7 @@
 ?>
 <style>
     body {
-        background: url('https://cdn.dribbble.com/users/162759/screenshots/2680829/underthesea_1x.jpg');
+        background: url('http://www.createwebquest.com/sites/default/files/images/182401_ocean-waves-wallpaper-1680x1050-tides-receded_1680x1050_0.jpg') no-repeat center center / cover;
     }
     ol {
         width: 100%;
@@ -22,19 +22,18 @@
         font-family: sans-serif;
         font-size: 20px;
         line-height: 24px;
-        border-radius: 20px;
-        border: 4px solid #fff;
-        padding: 5px 15px;
+        border-radius: 3px;
+        padding: 10px 15px;
         width: auto;
         color: #fff;
-        background-color: #1DB6BB;
+        background-color: #232f3f;
         text-decoration: none;
         transition-property: border-color, background-color;
         transition: .3s ease;
     }
     ol a:hover {
         background-color: rgba(0, 100, 120, .8);
-        border-color: #1DB6BB;
+        border-color: #399c3f;
         color: #fff;
     }
         
