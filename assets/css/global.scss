@@ -1,12 +1,12 @@
 @import '_core/core';
 @import "libs/libs";
 //sections
+@import "sections/wp-styles";
 @import "sections/style-guide";
 @import "sections/animations";
 @import "sections/font-face";
 @import "sections/header";
 @import "sections/footer";
-@import "sections/wp-styles";
 //
 main {
   @include flex(column);
