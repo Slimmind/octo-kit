@@ -38,7 +38,7 @@ if (_p !== -1) {
     pages = pageName;
   }
 }
-var pagesWatch = [pages, 'templates/*.html'];
+var pagesWatch = [pages, 'templates/*.html', 'popups/*.html'];
 
 //HTML include
 gulp.task('html', function () {
