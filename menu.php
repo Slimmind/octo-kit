@@ -29,6 +29,7 @@
     	transform: translate3d(0, -50%, 0);
     	color: #232f3f;
     	font: 700 20px/32px sans-serif;
+        transition: color .7s;
     }
     ul a {
         display: block;
@@ -43,9 +44,12 @@
         text-decoration: none;
         transition: background-color .3s ease;
     }
-    ul a:hover {
+    ul li:hover a {
         background-color: rgba(0, 100, 120, .8);
         color: #fff;
+    }
+    ul li:hover:before {
+        color: rgba(0, 100, 120, .8);
     }
         
 </style>
