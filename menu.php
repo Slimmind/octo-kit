@@ -26,6 +26,7 @@
                 background: url('http://www.createwebquest.com/sites/default/files/images/182401_ocean-waves-wallpaper-1680x1050-tides-receded_1680x1050_0.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
+                background-position: 50% 50%;
             }
             ul {
                 width: 100%;
