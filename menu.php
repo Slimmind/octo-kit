@@ -22,16 +22,22 @@
                 padding: 0;
                 box-sizing: border-box;
             }
-            body {
-                background: url('http://www.createwebquest.com/sites/default/files/images/182401_ocean-waves-wallpaper-1680x1050-tides-receded_1680x1050_0.jpg');
-                background-repeat: no-repeat;
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+            main {
+                min-height: 100%;
+                padding: 30px 0;
+                background-image: url('http://www.createwebquest.com/sites/default/files/images/182401_ocean-waves-wallpaper-1680x1050-tides-receded_1680x1050_0.jpg');
+                background-repeat:repeat;
                 background-size: cover;
                 background-position: 50% 50%;
             }
             ul {
                 width: 100%;
                 max-width: 480px;
-                margin: 30px auto;
+                margin: 0 auto;
                 padding: 0 10px 0 0;
                 list-style-type: none;
                 counter-reset: pages;
@@ -80,17 +86,19 @@
                     color: rgba(0, 100, 120, .8);
                 }
             }
-         </style>
+        </style>
     </head>
     <body>
-        <ul>
-            <?php foreach ($f as $file) :?>
-                <?php if (preg_match('/^(?!_).*html$/', $file)) :?>
-                    <li style="margin-left: 20px;">
-                        <a href="<?php echo ($file)?>" target="_blank"><?php echo ($file)?></a>
-                    </li>
-                <?php endif?>
-            <?php endforeach?>
-        </ul>
-     </body>
+        <main>
+            <ul>
+                <?php foreach ($f as $file) :?>
+                    <?php if (preg_match('/^(?!_).*html$/', $file)) :?>
+                        <li style="margin-left: 20px;">
+                            <a href="<?php echo ($file)?>" target="_blank"><?php echo ($file)?></a>
+                        </li>
+                    <?php endif?>
+                <?php endforeach?>
+            </ul>
+        </main>
+    </body>
 </html>
