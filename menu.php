@@ -29,7 +29,7 @@
             main {
                 min-height: 100%;
                 padding: 30px 0;
-                background-image: url('http://www.createwebquest.com/sites/default/files/images/182401_ocean-waves-wallpaper-1680x1050-tides-receded_1680x1050_0.jpg');
+                background-image: url('https://picsum.photos/1920/980/?random');
                 background-repeat:repeat;
                 background-size: cover;
                 background-position: 50% 50%;
@@ -76,6 +76,9 @@
                 background-color: #232f3f;
                 text-decoration: none;
                 transition: background-color .3s ease;
+            }
+            ul a:visited {
+                background-color: #45546D;
             }
             @media screen and (min-width: 1280px) {
                 ul li:hover a {
