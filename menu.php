@@ -15,7 +15,7 @@
         <link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
         <meta content="telephone=no" name="format-detection">
-        <title>TROPIFLORA</title>
+        <title>MENU</title>
         <style>
             * {
                 margin: 0;
