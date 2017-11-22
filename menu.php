@@ -28,7 +28,7 @@
             }
             main {
                 min-height: 100%;
-                padding: 30px 0;
+
                 background-image: url('https://picsum.photos/1920/980/?random');
                 background-repeat:repeat;
                 background-size: cover;
@@ -36,9 +36,9 @@
             }
             ul {
                 width: 100%;
-                max-width: 480px;
+                height: 100vh;
                 margin: 0 auto;
-                padding: 0 10px 0 0;
+                padding: 30px 0;
                 list-style-type: none;
                 counter-reset: pages;
             }
@@ -47,7 +47,10 @@
                 display: block;
                 margin-bottom: 5px;
                 padding-left: 50px;
+
                 counter-increment: pages;
+                width: 100%;
+                max-width: 480px;
             }
             ul li:before {
                 content: counter(pages);
@@ -80,7 +83,14 @@
             ul a:visited {
                 background-color: #45546D;
             }
-            @media screen and (min-width: 1280px) {
+            @media screen and (min-width: 1024px) {
+                ul{
+                    flex-direction: column;
+                    align-items: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }
                 ul li:hover a {
                     background-color: rgba(0, 100, 120, .8);
                     color: #fff;
@@ -96,7 +106,7 @@
             <ul>
                 <?php foreach ($f as $file) :?>
                     <?php if (preg_match('/^(?!_).*html$/', $file)) :?>
-                        <li style="margin-left: 20px;">
+                        <li>
                             <a href="<?php echo ($file)?>" target="_blank"><?php echo ($file)?></a>
                         </li>
                     <?php endif?>
