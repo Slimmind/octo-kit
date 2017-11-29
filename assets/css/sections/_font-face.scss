@@ -1,13 +1,49 @@
 @import "../libs/variables";
 //
 @font-face {
-  font-family: 'font-family-name';
-  src: url('#{$path-fonts}/font-name.eot');
-  src: url('#{$path-fonts}/font-name.eot?#iefix') format('embedded-opentype'),
-  url('#{$path-fonts}/font-name.woff2') format('woff2'),
-  url('#{$path-fonts}/font-name.woff') format('woff'),
-  url('#{$path-fonts}/font-name.ttf') format('truetype'),
-  url('#{$path-fonts}/font-name.svg#encode_sans_compressedregular') format('svg');
+  font-family: 'ralewaymedium';
+  src: url('#{$path-fonts}/raleway-medium-webfont.eot');
+  src: url('#{$path-fonts}/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'), 
+    url('#{$path-fonts}/raleway-medium-webfont.woff2') format('woff2'), 
+    url('#{$path-fonts}/raleway-medium-webfont.woff') format('woff'), 
+    url('#{$path-fonts}/raleway-medium-webfont.ttf') format('truetype'), 
+    url('#{$path-fonts}/raleway-medium-webfont.svg#ralewaymedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'josefin_sansbold';
+  src: url('#{$path-fonts}/josefinsans-bold-webfont.eot');
+  src: url('#{$path-fonts}/josefinsans-bold-webfont.eot?#iefix') format('embedded-opentype'), 
+    url('#{$path-fonts}/josefinsans-bold-webfont.woff2') format('woff2'), 
+    url('#{$path-fonts}/josefinsans-bold-webfont.woff') format('woff'), 
+    url('#{$path-fonts}/josefinsans-bold-webfont.ttf') format('truetype'), 
+    url('#{$path-fonts}/josefinsans-bold-webfont.svg#josefin_sansbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'josefin_sansregular';
+  src: url('#{$path-fonts}/josefinsans-regular-webfont.eot');
+  src: url('#{$path-fonts}/josefinsans-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+    url('#{$path-fonts}/josefinsans-regular-webfont.woff2') format('woff2'), 
+    url('#{$path-fonts}/josefinsans-regular-webfont.woff') format('woff'), 
+    url('#{$path-fonts}/josefinsans-regular-webfont.ttf') format('truetype'), 
+    url('#{$path-fonts}/josefinsans-regular-webfont.svg#josefin_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'josefin_sanssemibold';
+  src: url('#{$path-fonts}/josefinsans-semibold-webfont.eot');
+  src: url('#{$path-fonts}/josefinsans-semibold-webfont.eot?#iefix') format('embedded-opentype'), 
+    url('#{$path-fonts}/josefinsans-semibold-webfont.woff2') format('woff2'), 
+    url('#{$path-fonts}/josefinsans-semibold-webfont.woff') format('woff'), 
+    url('#{$path-fonts}/josefinsans-semibold-webfont.ttf') format('truetype'), 
+    url('#{$path-fonts}/josefinsans-semibold-webfont.svg#josefin_sanssemibold') format('svg');
   font-weight: normal;
   font-style: normal;
 }

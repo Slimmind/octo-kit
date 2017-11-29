@@ -1,9 +1,19 @@
 $path-images: "../images";
 $path-fonts: "../fonts";
 $path-svg: "../../svg";
-//
+
+// FONTS
+$font-relaway-medium: 'ralewaymedium', sans-serif;
+$font-josefin-bold: 'josefin_sansbold', sans-serif;
+$font-josefin-semibold: 'josefin_sanssemibold', sans-serif;
+$font-josefin-regular: 'josefin_sansregular', sans-serif;
+
+// COLORS
 $color-white: #ffffff;
 $color-black: #000000;
+$color-dark-gray: #4A4A4A;
+$color-light-gray: #F5F5F5;
+$color-red: #FF6767;
 
 // BREAK-POINTS
 $small-breakpoint: 640px;
