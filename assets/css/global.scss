@@ -8,6 +8,12 @@
 @import "sections/header";
 @import "sections/footer";
 //
+
+.no-scroll {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 main {
   @include flex(column);
   flex-shrink: 0;

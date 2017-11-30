@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>close icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage_mobile_MENU" transform="translate(-280.000000, -29.000000)" fill="#FFFFFF">
+            <g id="menu_pressed">
+                <g id="close-icon-white" transform="translate(280.000000, 29.000000)">
+                    <rect id="Rectangle-13" transform="translate(12.500000, 12.500000) rotate(-315.000000) translate(-12.500000, -12.500000) " x="-3.125" y="11.4583333" width="31.25" height="2.08333333"></rect>
+                    <rect id="Rectangle-13-Copy" transform="translate(12.500000, 12.500000) rotate(-45.000000) translate(-12.500000, -12.500000) " x="-3.125" y="11.4583333" width="31.25" height="2.08333333"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -28,7 +28,7 @@ var plumber = require('gulp-plumber');
 
 var pages = '_*.html';
 var syncPages = '*.html';
-var startPage = 'octoKit.lo/menu.php';
+var startPage = 'sika.lo/menu.php';
 
 //gulp -p _home.html
 var _p = args.indexOf('-p');
@@ -176,5 +176,5 @@ gulp.task('watch', function () {
 
 // DEFAULT
 
-gulp.task('default', taskSequence('clean', 'html', 'images', 'fonts', 'scss', 'js', /*'serve', */'watch'));
+gulp.task('default', taskSequence('clean', 'html', 'images', 'fonts', 'scss', 'js', 'serve', 'watch'));
 gulp.task('prod', taskSequence('fonts', 'images-prod', 'scss-prod', 'js-prod'));

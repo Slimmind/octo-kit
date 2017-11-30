@@ -1,4 +1,16 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32"
-     height="32" viewBox="0 0 32 32">
-  <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="18px" viewBox="0 0 9 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title></title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-545.000000, -236.000000)" fill="#000000">
+            <g id="footer-copy">
+                <g id="icons-(social)" transform="translate(544.000000, 237.000000)">
+                    <path d="M9.98995536,-0.308035714 L9.98995536,2.34375 L8.41294643,2.34375 C7.83705069,2.34375 7.44866172,2.46428451 7.24776786,2.70535714 C7.046874,2.94642978 6.94642857,3.3080333 6.94642857,3.79017857 L6.94642857,5.68861607 L9.88950893,5.68861607 L9.49776786,8.66183036 L6.94642857,8.66183036 L6.94642857,16.2857143 L3.87276786,16.2857143 L3.87276786,8.66183036 L1.31138393,8.66183036 L1.31138393,5.68861607 L3.87276786,5.68861607 L3.87276786,3.49888393 C3.87276786,2.25334199 4.22097866,1.28739182 4.91741071,0.601004464 C5.61384277,-0.0853828962 6.54128885,-0.428571429 7.69977679,-0.428571429 C8.68415671,-0.428571429 9.44754193,-0.388393259 9.98995536,-0.308035714 Z" id=""></path>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

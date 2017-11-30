@@ -4,7 +4,6 @@
   box-sizing: border-box;
   outline: none !important;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  cursor: pointer;
 }
 html, body {
 	width: 100%;
@@ -15,15 +14,16 @@ body {
   color: $color-dark-gray;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
 }
 main {
   position: relative;
 }
 h1, .h1 {
-  font: 30px/37px $font-relaway-medium;
+  font: 30px/37px $font-raleway-medium;
 }
 h2, .h2 {
-  font: 26px/30px $font-relaway-medium;  
+  font: 26px/30px $font-raleway-medium;
 }
 h3, .h3 {
   font: 20px/28px $font-josefin-bold;
@@ -50,6 +50,8 @@ img {
   height: auto;
 }
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 address {
@@ -125,6 +127,57 @@ textarea {
     text-transform: uppercase;
   }
 }
+.icon-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+  &.arrow-btn {
+    background-color: $color-black;
+    transition: background-color .3s;
+    border: 1px solid $color-black;
+    &:before {
+      content: "";
+      @include pos(absolute, calc(50% - 6px), calc(50% - 3px));
+      border: 6px solid transparent;
+      border-left-color: $color-white;
+      transition: border-left-color .3s;
+    }
+  }
+  &.cart-btn {
+    background: url('#{$path-svg}/cart-dark.svg') no-repeat 50% 50% / 20px auto;
+  }
+  &.account-btn {
+    background: url('#{$path-svg}/account-dark.svg') no-repeat 50% 50% / 18px auto;
+  }
+}
+.secondary-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  max-width: 320px;
+  padding: 11px 20px 11px 0;
+  font: 14px/18px $font-raleway-semibold;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include dots();
+  &:before {
+    content: "";
+    @include pos(absolute, 15px, $right: 4px);
+    border: 5px solid transparent;
+    border-left-color: $color-black;
+    transform: translateX(0);
+    transition: transform .1s ease-out;
+  }
+}
 input[type="radio"],
 input[type="checkbox"] {
   display: block;
@@ -154,11 +207,21 @@ label {
   }
 }
 .no-dev {
-  * {
+  body {
     cursor: auto;
   }
   .btn:hover {
     background-color: $color-white;
     color: $color-black;
+  }
+  .secondary-btn:hover:before {
+    transform: translateX(4px);
+    text-decoration: underline;
+  }
+  .arrow-btn:hover {
+    background-color: $color-white;
+    &:before {
+      border-left-color: $color-black;
+    }
   }
 }

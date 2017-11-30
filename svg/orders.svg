@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dashboard-menu" transform="translate(-263.000000, -32.000000)" fill="#000000">
+            <g id="Group">
+                <g transform="translate(50.000000, 26.000000)">
+                    <g id="Group-11" transform="translate(213.000000, 6.000000)">
+                        <path d="M1.1,10.8888889 L9.9,10.8888889 L9.9,3.11111111 L1.1,3.11111111 L1.1,10.8888889 Z M0,12 L11,12 L11,2 L0,2 L0,12 Z" id="Fill-28"></path>
+                        <polyline id="Fill-29" points="13 11 11.952381 11 11.952381 1.15789474 2 1.15789474 2 0 13 0 13 11"></polyline>
+                        <polygon id="Fill-30" points="3 6 8 6 8 5 3 5"></polygon>
+                        <polygon id="Fill-31" points="2 9 8 9 8 8 2 8"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
