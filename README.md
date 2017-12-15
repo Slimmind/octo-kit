@@ -37,17 +37,17 @@
     git checkout -b slice
     ```
 
-7. *put octoKIT files into your project-path*
+7. *pull octoKIT files into your project-path*
 
 8. *if you use legacy node version (0.12), run node-modules installation by command:*
 
     ```
-    sudo npm install
+    sudo npm install (or just 'yarn')
     ```
 9. *find startPage variable in your gulpfile.js and replace it equal ot yourProjectName:*
 
     ```javascript
-    var startPage = 'yourProjectName.lo/menu.html';
+    var startPage = 'yourProjectName.lo/menu.php';
     ```
 
 10. *run gulp for development by command:*
